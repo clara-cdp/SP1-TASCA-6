@@ -12,10 +12,12 @@
         <?php
 
 
+
         $userName = isset($_POST['username']) ? htmlspecialchars($_POST['username']) : 'Guest';
+
         $userEmail = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : 'No email provided';
 
-        echo "<p>Hello, $userName. We welcome to our community!.</p><br>";
+        echo "<p>Hello, $userName. We welcome you to our community!.</p><br>";
         echo "Our newsletter will be sent to your email account $userEmail<br>";
 
         echo "<h3> Your chosen fate: </h3>";
@@ -40,6 +42,24 @@
                     echo "<p> You choose poorly. And will burn before the gates of hell</p>";
                 }
             }
+        }
+
+
+        $selected_ally = isset($_POST['allies']) ? $_POST['allies'] : '';
+
+        switch ($selected_ally) {
+            case 'cats':
+                echo "<p>😼<br> You chose Cats! Their judgment will be swift and silent.</p>";
+                break;
+            case 'dogs':
+                echo "<p>🐶 <br> You chose Dogs! Prepare for loyalty and bitten socks.</p>";
+                break;
+            case 'parrots':
+                echo "<p>🦜 <br> You chose Parrots! Your secrets are now public knowledge.</p>";
+                break;
+            default:
+                echo "<p>Please, select a monster ally to begin your adventure.</p>";
+                break;
         }
 
         ?>
