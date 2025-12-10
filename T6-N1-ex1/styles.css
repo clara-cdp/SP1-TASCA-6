@@ -1,6 +1,5 @@
 body {
-    /*background-image: url("assets/starry-night.jpg");*/
-    background-color: #705799;
+    background-image: url("assets/starry-night.jpg");
     background-size: cover;
     padding: 30px;
     font-family: monospace, 'Courier New', Courier, sans-serif;
