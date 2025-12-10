@@ -1,5 +1,6 @@
 body {
-    background-image: url("assets/starry-night.jpg");
+    /*background-image: url("assets/starry-night.jpg");*/
+    background-color: #705799;
     background-size: cover;
     padding: 30px;
     font-family: monospace, 'Courier New', Courier, sans-serif;
@@ -8,7 +9,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
 h1 {
@@ -18,10 +18,19 @@ h1 {
     font-size: 1.5em;
 }
 
+.error {
+    color: rgb(95, 39, 39);
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: left;
+    align-self: flex-start;
+}
+
 div {
     height: warp-content;
     width: 40vw;
     max-width: 600px;
+    min-width: 300px;
     padding: 20px 30px;
 
     display: flex;

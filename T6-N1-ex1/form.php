@@ -1,0 +1,53 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>BatForm</title>
+</head>
+
+<body>
+    <div class="questionare">
+        <h1>Registration form</h1>
+
+        <form action="action_page.php" method="post">
+
+            <label for="userName">Name:</label><br>
+            <input class="text-field" type="text" name="userName" placeholder="Bruce Wayne"><br><br>
+
+            <label for="userEmail">Email:</label><br>
+            <input class="text-field" type="text" name="userEmail"
+                placeholder="batman@wayneenterprises.com"><br><br>
+
+            <label for="monster">Would you rather become a: </label><br>
+            <input type="checkbox" id="vampire" name="monster[]" value="vampire">
+            <label for="vampire"> Vampire</label><br>
+            <input type="checkbox" id="werewolf" name="monster[]" value="werewolf">
+            <label for="werewolf"> Werewolf</label><br><br>
+
+            <label for="radio">In case of apocalypse, which species will dominate? <br>
+                (Choose your favorite for peace negotiation)</label><br>
+
+            <select id="allies" name="allies">
+                <option value="">-- Make a Selection --</option>
+                <option value="cats">Cats (Masters of stealth and judgment)</option>
+                <option value="dogs">Dogs (Unwavering loyalty, major drool factor)</option>
+                <option value="parrots">Parrots (Perfect spies and relentless chatterboxes)</option>
+            </select><br>
+
+            <br>
+            <br>
+
+            <input class="button" type="submit" name="submit" value="register">
+        </form>
+    </div>
+</body>
+
+</html>

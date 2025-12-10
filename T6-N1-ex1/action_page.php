@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <html>
 <link rel="stylesheet" href="styles.css">
 
@@ -5,22 +9,23 @@
     <div class=Questionare>
 
         <style>
-            html {
+            div {
                 text-align: center;
             }
         </style>
+
         <?php
 
+        $_SESSION['userName'] = !empty($_POST['userName']) ? htmlspecialchars($_POST['userName']) : '- GUEST -';
+        $_SESSION['userEmail'] = !empty($_POST['userEmail']) ? htmlspecialchars($_POST['userEmail']) : '- No email provided -';
 
 
-        $userName = isset($_POST['username']) ? htmlspecialchars($_POST['username']) : 'Guest';
+        echo "<h2>Hello " . $_SESSION['userName'] . "</h2><br>Once again...welcome to my house. Come freely. Go safely; and leave something of the happiness you bring.<br>";
+        echo "<br>Our newsletter will be sent to " . $_SESSION['userEmail'] . "<br>";
 
-        $userEmail = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : 'No email provided';
+        /* ------------------------------- vamps and allies ----------------------------------------*/
 
-        echo "<p>Hello, $userName. We welcome you to our community!.</p><br>";
-        echo "Our newsletter will be sent to your email account $userEmail<br>";
-
-        echo "<h3> Your chosen fate: </h3>";
+        echo "<p><bold> Your chosen fate: </bold></p>";
 
         $monster = isset($_POST['monster']) && is_array($_POST['monster']) ? $_POST['monster'] : [];
 
@@ -60,6 +65,18 @@
             default:
                 echo "<p>Please, select a monster ally to begin your adventure.</p>";
                 break;
+        }
+
+        ?>
+        <form action="form.php" method="post">
+            <input class="button" type="submit" name="submit" value="RUN AWAY!">
+        </form>
+
+        <?php
+
+        if (isset($_post["RUN AWAY!"])) {
+            session_destroy();
+            header("Location:form.php");
         }
 
         ?>
