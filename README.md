@@ -14,7 +14,7 @@ exercici 3 : utilització de MÈTODES MÀGICS
 
 exercici 1 : pràctica d'ENUMS i CLASSES
 
-exercici 2 Ñ pràctica de TRAITS, ENUMS i CLASSES
+exercici 2 : pràctica de TRAITS, ENUMS i CLASSES
 
 ## NIVELL 3
 
