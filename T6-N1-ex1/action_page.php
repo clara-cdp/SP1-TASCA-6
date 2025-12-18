@@ -30,6 +30,7 @@ session_start();
         $monster = isset($_POST['monster']) && is_array($_POST['monster']) ? $_POST['monster'] : [];
 
         $selected_count = count($monster);
+
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $vampCheked = in_array('vampire', $monster);
             $wereCheked = in_array('werewolf', $monster);
