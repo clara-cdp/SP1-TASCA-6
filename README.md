@@ -18,9 +18,15 @@ exercici 2 Ñ pràctica de TRAITS, ENUMS i CLASSES
 
 ## NIVELL 3
 
+exercici 1 : installar composer
+
+exercici 2 : fer un programa que utilitzy una llibreria
+
 ### Tecnologies
 - PHP
 - HTML
 - CSS
+- composer/slugify
+
 
 
