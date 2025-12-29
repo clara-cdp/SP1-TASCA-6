@@ -22,6 +22,8 @@ exercici 1 : installar composer
 
 exercici 2 : fer un programa que utilitzy una llibreria
 
+<img width="1581" height="234" alt="TASCA6-N3" src="https://github.com/user-attachments/assets/8530a694-819b-4a18-8759-3eedc4c52a8e" />
+
 ### Tecnologies
 - PHP
 - HTML
